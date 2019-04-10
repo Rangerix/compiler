@@ -1,0 +1,17 @@
+D:n
+D:f
+D:v
+C:i(E){S}l{S};
+C:
+E:i+i
+E:i-i
+E:i*i
+E:i/i
+
+n=int
+f=float
+v=void
+l=else
+i=if
+E=exp
+S=statement
