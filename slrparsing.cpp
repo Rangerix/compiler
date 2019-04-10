@@ -93,7 +93,7 @@ vector<char> getmoves(set<string> state){
 				if(alphabet[i]==temp1[x+1])
 					break;
 			}
-			if(i>=alphabet.size())
+			if(i>=alphabet.size()&&temp1[x+1]!='$')
 				alphabet.push_back(temp1[x+1]);
 		}
 	}
@@ -265,6 +265,21 @@ vector<vector<string> > preparetable(set<char> alphabet){
 
 		}
 	}
+	//now accept case
+	for(i=0;i<index;i++){
+		set<string> state=statelabel1[i];
+		set<string>::iterator itr;
+		for(itr=state.begin();itr!=state.end();itr++){
+			string temp1=(*itr);
+			if((temp1.find('.')==temp1.length()-2)&&(temp1.find('$')==temp1.length()-1)){
+				for(j=0;j<vec.size();j++){
+					if(vec[j]=='$')
+						break;
+				}
+				parsingtable[i][j]="ac";
+			}
+		}	
+	}
 	cout<<endl<<endl<<"    ";
 	for(i=0;i<vec.size();i++){
 		cout<<setw(5)<<vec[i]<<" | ";
@@ -304,13 +319,19 @@ void parsing(vector<vector<string> > parsingtable,set<char> alphabet){
 		}
 		string action=parsingtable[row][j];
 		cout<<action;
+		if(action=="ac"){
+			cout<<"\naccept\n";
+			break;
+		}
+		if(action=="--"){
+			cout<<"\nno action for this move...\n";
+			break;
+		}
 		if(action[0]=='S'){
 			string temp1(1,parse[i]);
 			mystack.push_back(temp1);
 			i++;
-			temp1="";
-			temp1.push_back(action[1]);
-			mystack.push_back(temp1);
+			mystack.push_back(action.substr(1));
 		}
 		else if(action[0]=='R'){
 			int j=action[1]-'0';
@@ -326,7 +347,7 @@ void parsing(vector<vector<string> > parsingtable,set<char> alphabet){
 			}
 			row=stoi(mystack[mystack.size()-2]);
 			string temp1=parsingtable[row][x];
-			mystack.push_back(temp1.substr(1,1));
+			mystack.push_back(temp1.substr(1));
 		}
 		cout<<endl;
 	}
