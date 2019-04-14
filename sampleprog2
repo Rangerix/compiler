@@ -1,0 +1,26 @@
+float f(float a){
+	int x;
+	if(a>x){
+		int y;
+		return a+y;
+	}
+	else{
+		int z;
+		return a-z;
+	}
+
+}
+void f1(float a,float b){
+	float t;
+	f(a);
+	f(b);
+}
+int main()
+{
+	int x;
+	float y;
+	read(x);
+	read(y);
+	f1(x,y);
+return 0;
+}

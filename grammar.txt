@@ -1,17 +1,64 @@
+35
+Z:Y$
+Y:Db(G){LM}Y
+Y:Db(){LM}
 D:n
 D:f
 D:v
-C:i(E){S}l{S};
-C:
-E:i+i
-E:i-i
-E:i*i
-E:i/i
+G:Db,G
+G:Db
+L:Db;L
+L:Db;
+M:SM
+M:CM
+M:S
+M:C
+S:r(b);
+S:p(E);
+S:tE;
+S:b(F);
+F:X,F
+F:X
+C:i(R){LN}l{LN}
+N:SN
+N:S
+R:XBX
+E:X
+E:XOX
+O:+
+O:-
+O:*
+O:/
+B:>
+B:<
+B:=
+X:b
+X:d
+fb(fb){nb;i(b>b){nb;tb+b;}l{nb;tb-b;}}vb(fb,fb){fb;b(b);b(b);}nb(){nb;fb;r(b);r(b);b(b,b);td;}$
 
-n=int
+b=variable (including function name)
+d=id
 f=float
-v=void
-l=else
 i=if
+l=else
+m=main
+n=int
+p=print
+r=read
+t=return
+v=void
+
+A=declare statement
+B=relational operator
+C=conditional statement
+D=Datatype
 E=exp
+F=parameter
+G=argument
+L=declare list
+M=statement list
+N=statement list without conditional
+O=operator
+R=relational expression
 S=statement
+X=terminal

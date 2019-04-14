@@ -1,0 +1,20 @@
+void max(float a,float b){
+	float t;
+	if(a>b){
+		float t;
+		print(a);
+	}
+	else{
+		float t;
+		print(b);
+	}
+}
+int main()
+{
+	int x;
+	float y;
+	read(x);
+	read(y);
+	max(x,y);
+return 0;
+}

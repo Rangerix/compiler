@@ -1,0 +1,18 @@
+int main()
+{
+	int x;
+	float y;
+	if(x>y){
+		int b;
+		read(b);
+		print(b+x);
+	}
+	else
+	{
+		int a;
+		read(a);
+		print(a+y);
+	}
+
+return 0;
+}

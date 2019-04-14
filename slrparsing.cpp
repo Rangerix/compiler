@@ -199,7 +199,7 @@ void getfollow(char key){
 					getfollow(rules[i][0]);
 					follow[key].insert(follow[rules[i][0]].begin(),follow[rules[i][0]].end());
 				}
-				follow[key].erase('=');
+				follow[key].erase(':');
 			}
 		}
 	}
@@ -334,7 +334,8 @@ void parsing(vector<vector<string> > parsingtable,set<char> alphabet){
 			mystack.push_back(action.substr(1));
 		}
 		else if(action[0]=='R'){
-			int j=action[1]-'0';
+			string temp2=action.substr(1);
+			int j=stoi(temp2);
 			int x=rules[j].length()-2;
 			x*=2;
 			while(x--){
@@ -401,6 +402,14 @@ int main()
 		cout<<endl;	
 	}
 	computedfa();
+	for(i=0;i<index;i++){
+		set<string> state=statelabel1[i];
+		cout<<"state : "<<i<<endl;
+		for(set<string>::iterator itr1=state.begin();itr1!=state.end();itr1++){
+			cout<<(*itr1)<<endl;
+		}
+		cout<<endl;
+	}
 	vector<vector<string> > p=preparetable(alphabet);
 	parsing(p,alphabet);
 return 0;
