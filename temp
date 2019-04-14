@@ -1,12 +1,13 @@
-28
+29
 Z:Y$
-Y:Db(){LM}
+Y:Dv(){LM}
 D:n
 D:f
 D:v
 L:Db;L
 L:Db;
 M:SM
+M:CM
 M:S
 M:C
 S:r(b);
@@ -27,4 +28,4 @@ B:<
 B:=
 X:b
 X:d
-nb(){nb;fb;r(b);p(b);i(b>b){fb;p(b);}l{vb;p(b);}}$
+nv(){nb;fb;i(b>b){nb;p(b);}l{nb;p(b);}td;}$
