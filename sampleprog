@@ -1,6 +1,6 @@
 void max(float a,float b){
 	float t;
-	if(a>b){
+	if(a=b){
 		float t;
 		print(a);
 	}

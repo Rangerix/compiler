@@ -121,6 +121,7 @@ int main(int argc,char **argv)
 	string s,stemp;
 	while(file){
 		linecount++;
+		s="";
 		getline(file,s);
 		l=s.length();
 		stemp="";

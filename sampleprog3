@@ -1,0 +1,8 @@
+void main()
+{
+	int x;
+	float y;
+	read(x);
+	read(y);
+	print(x+y);
+}
